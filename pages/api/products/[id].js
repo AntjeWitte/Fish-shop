@@ -16,7 +16,7 @@ export default async function handler(request, response) {
 
   if (request.method === "PUT") {
     const productData = request.body;
-    await productData.findByIdandUpdate(id, { $set: request.body });
+    await Product.findByIdAndUpdate(id, productData);
     return response
       .status(200)
       .json({ status: "Product successfully updated!" });

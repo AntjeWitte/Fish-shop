@@ -72,7 +72,9 @@ export default function Product() {
           </span>
         </button>
       </div>
-      {isEditMode && <ProductForm onSubmit={handleEdit} isEditMode={true} />}
+      {isEditMode && (
+        <ProductForm onSubmit={handleEdit} value={data} isEditMode={true} />
+      )}
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
